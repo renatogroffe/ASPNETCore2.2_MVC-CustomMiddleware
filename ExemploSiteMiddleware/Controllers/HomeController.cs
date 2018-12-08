@@ -8,7 +8,6 @@ using ExemploSiteMiddleware.Models;
 
 namespace ExemploSiteMiddleware.Controllers
 {
-    [MiddlewareFilter(typeof(IndisponibilidadePipeline))]
     public class HomeController : Controller
     {
         public IActionResult Index()
@@ -16,7 +15,7 @@ namespace ExemploSiteMiddleware.Controllers
             return View();
         }
 
-        //[MiddlewareFilter(typeof(IndisponibilidadePipeline))]
+        [MiddlewareFilter(typeof(IndisponibilidadePipeline))]
         public IActionResult Testar()
         {
             return View();
